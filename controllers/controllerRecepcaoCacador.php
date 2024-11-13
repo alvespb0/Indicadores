@@ -22,7 +22,7 @@ class ControllerRecepcaoCacador{
     public function salvarIndicadores($RecepcaoCacador){
         $daoCacador = new DAORecepcaoCacador;
 
-        if ($RecepcaoCacador->)
+        /* if ($RecepcaoCacador->) */
     }
 }
 
