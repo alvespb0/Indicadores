@@ -1,16 +1,16 @@
 <?php
 namespace DAO;
 
-require_once('../models/recepcaoFraiburgo.php');
-use models\RecepcaoFraiburgo;
+require_once('../models/recepcaoVideira.php');
+use models\RecepcaoVideira;
 
 /**
  * Esta classe é responsável por fazer a couminicação entre o banco de dados,
- * provendo as funções CRUD para a tabela de recepção fraiburgo
+ * provendo as funções CRUD para a tabela de recepção videira
  * @author Arthur Alves
  * @package DAO
  */
-class DAORecepcaoFraiburgo{
+class DAORecepcaoVideira{
     /**
      * inclui indicadores
      * @param int $clinicos
@@ -29,7 +29,7 @@ class DAORecepcaoFraiburgo{
             die($e->getMessage());
         }
 
-        $sqlInsert = $conexaoDB->prepare("INSERT into recepcao_fraiburgo (`data`, clinico, audiometria,
+        $sqlInsert = $conexaoDB->prepare("INSERT into recepcao_videira (`data`, clinico, audiometria,
         espirometria, acuidade, ecg, eeg) values (?,?,?,?,?,?,?)");
         $sqlInsert->bind_param("siiiiii", $data, $clinicos, $audiometria, $espirometria, $acuidade, $ecg, $eeg);
         $sqlInsert->execute();

@@ -26,7 +26,7 @@ class DAORecepcaoCacador{
      * @param int $av_medica
      * @param int $laboratoriais
      * @param int $pericias
-     * @param date $data 
+     * @param string $data 
      * @return TRUE|Exception
      */
     public function incluirIndicador($clinicos, $audiometria, $acuidade,
@@ -34,11 +34,13 @@ class DAORecepcaoCacador{
         try{
             $conexaoDB = $this->conectarBanco();
         }catch(\Exception $e){
-            die($e->getMessage())
+            die($e->getMessage());
         }
-        $sqlInsert = $conexaoDB->prepare("insert into recepcao_cacador
-        (data, clinicos, audiometria, acuidade, fonoaudiologia_clinica, ecg, eeg,
-        espirometria, raio_x, av_psicossocial, av_medica, laboratoriais, pericias) values (?,?,?,?,?,?,?,?,?,?,?,?");
+        
+        $sqlInsert = $conexaoDB->prepare("INSERT INTO recepcao_cacador
+            (`data`, clinicos, audiometria, acuidade, fonoaudiologia_clinica, ecg, eeg, 
+            espirometria, raio_x, av_psicossocial, av_medica, laboratoriais, pericias) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $sqlInsert->bind_param("siiiiiiiiiiii",$data, $clinicos, $audiometria, $acuidade, 
         $fonoaudiologia, $ecg, $eeg, $espirometria, $raio_x, $av_psicossocial, $av_medica, $laboratoriais, $pericias);
         $sqlInsert->execute();
