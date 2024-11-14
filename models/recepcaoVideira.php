@@ -2,8 +2,8 @@
 namespace models;
 
 /**
- * Classe Model para a tabela recepcao_fraiburgo
- * Representa os dados de recepção para a unidade Fraiburgo.
+ * Classe Model para a tabela recepcao_Videira
+ * Representa os dados de recepção para a unidade Videira.
  */
 class RecepcaoVideira {
     /**
