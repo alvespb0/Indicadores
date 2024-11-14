@@ -15,7 +15,7 @@ use models\Comercial;
         $comercial->contFechadasAtualComp = 11;
         $comercial->renovacaoAtualComp = 4;
         $comercial->ClientesNovosAtualComp = 2;
-        $comercial->valoresContratos = 100;
+        $comercial->valoresContratos = 100.50;
         $comercial->data = '2024-11-16';
 
 
