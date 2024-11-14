@@ -30,8 +30,11 @@ use models\RecepcaoCacador;
         try {
             // Testar o método salvarIndicadores do controller
             $resultado = $controller->salvarIndicadores($recepcaoCacador);
+            echo $resultado;
             if ($resultado) {
                 echo "Indicadores salvos com sucesso!";
+            }else{
+                echo "por que entrou aqui?";
             }
         } catch (\Exception $e) {
             // Se ocorrer algum erro, exibe a mensagem

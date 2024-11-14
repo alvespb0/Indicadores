@@ -30,6 +30,7 @@ class ControllerRecepcaoCacador{
             $daoCacador->incluirIndicador($RecepcaoCacador->clinicos, $RecepcaoCacador->audiometria, $RecepcaoCacador->acuidade, $RecepcaoCacador->fonoaudiologia_clinica,
             $RecepcaoCacador->ecg, $RecepcaoCacador->eeg, $RecepcaoCacador->espirometria, $RecepcaoCacador->raio_x, $RecepcaoCacador->av_psicossocial, $RecepcaoCacador->av_medica,
             $RecepcaoCacador->laboratoriais, $RecepcaoCacador->pericias, $RecepcaoCacador->data);
+            return true;
         }catch(\Exception $e){
             throw new \Exception($e->getmessage());
         }

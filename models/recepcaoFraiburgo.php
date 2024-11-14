@@ -58,7 +58,8 @@ class RecepcaoFraiburgo {
      * Construtor da classe RecepcaoFraiburgo
      * Inicializa os dados de um registro.
      */
-    public function __construct($id, $data, $clinico, $audiometria, $espirometria, $acuidade, $ecg, $eeg) {
+    public function __construct($id = null, $data = null, $clinico = null, $audiometria = null,
+        $espirometria = null, $acuidade = null, $ecg = null, $eeg = null) {
         $this->id = $id;
         $this->data = $data;
         $this->clinico = $clinico;
