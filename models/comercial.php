@@ -60,8 +60,8 @@ class Comercial{
      * Inicializa os dados de um registro.
      */
 
-    public function __construct($id, $data, $propostasEnviadas, $propostasFechadas, $contFechadasAtualComp, $renovacaoAtualComp,
-        $ClientesNovosAtualComp, $valoresContratos){
+    public function __construct($id = null, $data = null, $propostasEnviadas = null, $propostasFechadas = null,
+        $contFechadasAtualComp = null, $renovacaoAtualComp = null, $ClientesNovosAtualComp = null, $valoresContratos = null){
             $this->id = $id;
             $this->data = $data;
             $this->propostasEnviadas = $propostasEnviadas;

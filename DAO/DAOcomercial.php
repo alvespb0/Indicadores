@@ -25,7 +25,7 @@ class DAOcomercial{
      * @return TRUE|Exception
      */
 
-     public function incluirIndicador($propostasEnviadas, $propostasFechadas, $contFechadosAtualComp,
+    public function incluirIndicador($propostasEnviadas, $propostasFechadas, $contFechadosAtualComp,
         $renovacaoAtualComp, $clientesNovosAtualComp, $valoresContratos, $data){
         try{
             $conexaoDB = $this->conectarBanco();
