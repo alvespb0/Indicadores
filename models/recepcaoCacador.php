@@ -94,7 +94,8 @@ class RecepcaoCacador {
      * Construtor da classe RecepcaoCacador
      * Inicializa os dados de um registro.
      */
-    public function __construct($id, $data, $clinicos, $audiometria, $acuidade, $fonoaudiologia_clinica, $ecg, $eeg, $espirometria, $raio_x, $av_psicossocial, $av_medica, $laboratoriais, $pericias) {
+    public function __construct($id = null, $data = null, $clinicos = null, $audiometria = null, $acuidade = null, $fonoaudiologia_clinica = null,
+     $ecg = null, $eeg = null, $espirometria = null, $raio_x = null, $av_psicossocial = null, $av_medica = null, $laboratoriais = null, $pericias = null) {
         $this->id = $id;
         $this->data = $data;
         $this->clinicos = $clinicos;
