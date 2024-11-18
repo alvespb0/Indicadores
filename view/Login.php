@@ -1,4 +1,5 @@
-<?php include('../index.php');?>
+<?php include('../index.php');
+session_start();?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -101,14 +102,20 @@ form {
       <form action="../action/validalogin.php" method="POST">
         <div class="input-group">
           <label for="username">Usuário</label>
-          <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+          <input type="text" id="username" name="login" placeholder="Digite seu usuário" required>
         </div>
         <div class="input-group">
           <label for="password">Senha</label>
-          <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+          <input type="password" id="password" name="senha" placeholder="Digite sua senha" required>
         </div>
         <button type="submit">Entrar</button>
+        <?php
+        if (isset($_SESSION['Login404'])){
+        echo $_SESSION['Login404'];
+        unset($_SESSION['Login404']);
+        }?>
       </form>
+
     </div>
   </div>
 

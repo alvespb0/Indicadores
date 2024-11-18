@@ -35,8 +35,12 @@ class DAOUsuario{
         if($resultado->num_rows === 1){
             $usuarioData = $resultado->fetch_assoc();
 
+/*             foreach($usuarioData as $u){
+                echo $u;
+            } */
+
             $usuario = new Usuario(
-                $usuarioData['id'], 
+                $usuarioData['id'] = null,
                 $usuarioData['login'], 
                 $usuarioData['senha'], 
                 $usuarioData['tag']
@@ -44,13 +48,13 @@ class DAOUsuario{
     
             $sql->close();
             $conexaoDB->close();
-    
-            return $usuario;
             
-            }else{
+            return $usuario;
+
+            }/* else{
             throw new \Exception("Login não encontrado! Entre em contato com Arthur se o problema persistir");
             die;
-        }
+        } */
         $sql->close();
         $conexaoDB->close();
  
