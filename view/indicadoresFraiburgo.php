@@ -7,7 +7,7 @@
   <title>Cadastro de Indicadores - Fraiburgo</title>
   <link rel="stylesheet" href="#">
   <style>
-    /* Reset de margin e padding */
+/* Reset de margin e padding */
 * {
   margin: 0;
   padding: 0;
@@ -18,22 +18,57 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Garante que o conteúdo começa no topo */
-  min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da tela */
-  flex-direction: column; /* Certifica-se de que o layout é de coluna */
-  padding: 00px; /* Padding para evitar que o conteúdo fique colado nas bordas */
+  flex-direction: column; /* Garante que o conteúdo seja disposto verticalmente */
+  min-height: 100vh;
+  padding: 0;
+  /* margin-top: 60px; */ /* Espaço para a navbar fixa */
 }
 
-/* Container principal */
+/* Navbar */
+nav {
+  background-color: #286559;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Garantir que a navbar fique sobre outros elementos */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Links da navbar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #79ccc0;
+}
+
+/* Ajuste do Container principal para abaixo da navbar */
 .container {
   display: flex;
-  flex-direction: column;  /* Garante que o conteúdo será disposto de forma vertical */
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;  /* Garante que o conteúdo ocupa 100% da largura */
-  max-width: 900px;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-start; 
+  width: 100%;
+  margin-top: 20px; /* Ajusta o espaçamento após a navbar */
+  padding: 20px;
 }
 
 /* Box de Cadastro */
@@ -44,8 +79,8 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px;
-  max-height: 600px; /* Define a altura máxima da box */
-  overflow-y: auto; /* Adiciona rolagem interna se o conteúdo ultrapassar o limite de altura */
+  max-height: 600px;
+  overflow-y: auto;
   text-align: center;
 }
 
@@ -58,7 +93,7 @@ body {
 }
 
 .input-group {
-  margin-bottom: 15px; /* Espaçamento entre os campos */
+  margin-bottom: 15px;
   text-align: left;
 }
 
@@ -126,7 +161,7 @@ button:focus {
     <!-- Box de Cadastro de Indicador -->
     <div class="form-box">
       <h2>Cadastro de Indicador - Fraiburgo</h2>
-      <form action="salvar_indicadores_fraiburgo.php" method="POST">
+      <form action="../action/salvarFraiburgo.php" method="POST">
         <!-- Campos de Indicadores -->
         <div class="input-group">
           <label for="clinico">CLINICO</label>
@@ -152,17 +187,13 @@ button:focus {
           <label for="eeg">EEG</label>
           <input type="number" id="eeg" name="eeg" placeholder="Digite o valor de EEG" required>
         </div>
-        <div class="input-group">
-          <label for="total_mes">TOTAL MÊS</label>
-          <input type="number" id="total_mes" name="total_mes" placeholder="Digite o valor Total do Mês" required>
-        </div>
         <!-- Campo de Data -->
         <div class="input-group">
           <label for="data">Data</label>
           <input type="date" id="data" name="data" required>
         </div>
         <!-- Botão de Enviar -->
-        <button type="submit">Cadastrar Indicador</button>
+        <button type="submit" name = "cadastrar">Cadastrar Indicador</button>
       </form>
     </div>
   </div>
