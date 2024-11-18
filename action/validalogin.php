@@ -17,14 +17,19 @@ if (isset($_POST['login']) && isset($_POST['senha'])){
         session_start();
         if ($user->tag == 'recepcao_cacador') {
             $_SESSION['recepcao_cacador'] = $user->login;  // Salva o login na sessão
-            header("Location: ../view/recepcaoCacador.php");  // Redireciona para a página de recepção
+            header("Location: ../view/indicadoresCacador.php");  // Redireciona para a página de recepção
             exit;
         } else if ($user->tag == 'comercial') {
             $_SESSION['comercial'] = $user->login;  // Salva o login na sessão
             header("Location: ../view/comercial.php");  // Redireciona para a página comercial
             exit;
+        }else if($user->tag == 'recepcao_fraiburgo'){
+            $_SESSION['recepcao_fraiuburgo'] = $user->login;  // Salva o login na sessão
+            header("Location: ../view/indicadoresfraiburgo.php");  // Redireciona para a página de recepção
+            exit;
         }
     }else{
+        session_start();
         $_SESSION['Login404'] = "Login não encontrado! Entre em contato com Arthur se o problema persistir";
         header("Location: ../view/login.php");
     }

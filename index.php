@@ -79,7 +79,6 @@
   </style>
 </head>
 <body>
-
   <nav class="navbar">
     <div class="navbar-segment">
       <span>Segmetre Indicadores</span>
