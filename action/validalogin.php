@@ -24,8 +24,12 @@ if (isset($_POST['login']) && isset($_POST['senha'])){
             header("Location: ../view/comercial.php");  // Redireciona para a página comercial
             exit;
         }else if($user->tag == 'recepcao_fraiburgo'){
-            $_SESSION['recepcao_fraiuburgo'] = $user->login;  // Salva o login na sessão
+            $_SESSION['recepcao_fraiburgo'] = $user->login;  // Salva o login na sessão
             header("Location: ../view/indicadoresfraiburgo.php");  // Redireciona para a página de recepção
+            exit;
+        }else if($user->tag == 'recepcao_videira'){
+            $_SESSION['recepcao_videira'] = $user->login;  // Salva o login na sessão
+            header("Location: ../view/indicadoresVideira.php");  // Redireciona para a página de recepção
             exit;
         }
     }else{
