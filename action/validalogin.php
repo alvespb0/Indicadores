@@ -31,6 +31,9 @@ if (isset($_POST['login']) && isset($_POST['senha'])){
             $_SESSION['recepcao_videira'] = $user->login;  // Salva o login na sessão
             header("Location: ../view/indicadoresVideira.php");  // Redireciona para a página de recepção
             exit;
+        }else if($user->tag == 'seguranca'){
+            $_SESSION['seguranca'] = $user->login; // Salva o login na sessão
+            header("Location: ../view/indicadoresSeguranca.php"); // Redireciona para a página da recepçã
         }
     }else{
         session_start();
