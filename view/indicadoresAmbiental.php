@@ -1,4 +1,7 @@
-<?php include('../index.php');?>
+<?php include('../index.php');
+session_start();
+if(isset($_SESSION['ambiental'])){
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -188,3 +191,8 @@ button:focus {
 
 </body>
 </html>
+<?php
+}else{
+  echo "teste";
+}
+?>

@@ -17,10 +17,9 @@ if(isset($_POST['cadastrar'])){
     $ambiental->data = $_POST['data'];
     $resultado = $controllerAmbiental->salvarIndicadores($ambiental);
         
-    // Se o resultado for verdadeiro, redireciona para a página de sucesso
     if ($resultado === true) {
-        header("Location: Salvo_com_sucesso.php"); // Redireciona para Salvo_com_sucesso.php
-        exit; // Sempre é bom usar o exit após o header para evitar execução de código posterior
+        header("Location: ../view/indicadoresSalvos.php"); 
+        exit;
     }
 }
 ?>
