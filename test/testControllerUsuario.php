@@ -4,6 +4,6 @@ use controllers\ControllerUsuario;
 
 $controller = new ControllerUsuario();
 
-$controller->cadastrarUser("Carina", "123456", "seguranca");
+$controller->cadastrarUser("Mari", "123456", "ambiental");
 /* $controller->fazerLogin("arthur", "123456"); */
 ?>

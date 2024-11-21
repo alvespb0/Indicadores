@@ -33,7 +33,10 @@ if (isset($_POST['login']) && isset($_POST['senha'])){
             exit;
         }else if($user->tag == 'seguranca'){
             $_SESSION['seguranca'] = $user->login; // Salva o login na sessão
-            header("Location: ../view/indicadoresSeguranca.php"); // Redireciona para a página da recepçã
+            header("Location: ../view/indicadoresSeguranca.php"); // Redireciona para a página da Seguranca
+        }else if($user->tag == 'ambiental'){
+            $_SESSION['ambiental'] = $user->login; // Salva o login na sessão
+            header("Location: ../view/indicadoresAmbiental.php"); // Redireciona para a página da Ambiental
         }
     }else{
         session_start();
