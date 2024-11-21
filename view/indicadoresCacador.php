@@ -1,5 +1,7 @@
 <?php include('../index.php'); 
-session_start();?>
+session_start();
+echo $_SESSION['recepcao_cacador'];
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -21,7 +21,7 @@ if (isset($_POST['login']) && isset($_POST['senha'])){
             exit;
         } else if ($user->tag == 'comercial') {
             $_SESSION['comercial'] = $user->login;  // Salva o login na sessão
-            header("Location: ../view/comercial.php");  // Redireciona para a página comercial
+            header("Location: ../view/indicadoresComercial.php");  // Redireciona para a página comercial
             exit;
         }else if($user->tag == 'recepcao_fraiburgo'){
             $_SESSION['recepcao_fraiburgo'] = $user->login;  // Salva o login na sessão
