@@ -27,6 +27,11 @@ if(isset($_POST['cadastrar'])){
     $recepcaoCacador->pericias = $_POST['pericias'];
     $recepcaoCacador->data = $_POST['data'];
 
-    $controllerCacador->salvarIndicadores($recepcaoCacador);
+    $resultado = $controllerCacador->salvarIndicadores($recepcaoCacador);
+  
+    if ($resultado === true) {
+        header("Location: ../view/indicadoresSalvos.php"); 
+        exit;
+    }
 }
 ?>

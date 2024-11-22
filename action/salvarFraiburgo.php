@@ -19,6 +19,11 @@ if(isset($_POST['cadastrar'])){
     $recepcaoFraiburgo->eeg = $_POST['eeg'];
     $recepcaoFraiburgo->data = $_POST['data'];
 
-    $controllerFraiburgo->salvarIndicadores($recepcaoFraiburgo);
+    $resultado = $controllerFraiburgo->salvarIndicadores($recepcaoFraiburgo);
+
+    if ($resultado === true) {
+        header("Location: ../view/indicadoresSalvos.php"); 
+        exit;
+    }
 }
 ?>

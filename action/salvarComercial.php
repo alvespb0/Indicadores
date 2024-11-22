@@ -18,6 +18,11 @@ if(isset($_POST['cadastrar'])){
     $comercial->ClientesNovosAtualComp = $_POST['ClientesNovos'];
     $comercial->valoresContratos = $_POST['Valor_Contratos'];
     $comercial->data = $_POST['data'];
-    $controllerComercial->salvarIndicadores($comercial);
+    $resultado = $controllerComercial->salvarIndicadores($comercial);
+
+    if ($resultado === true) {
+        header("Location: ../view/indicadoresSalvos.php"); 
+        exit;
+    }
 }
 ?>

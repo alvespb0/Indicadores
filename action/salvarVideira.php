@@ -19,6 +19,11 @@ if(isset($_POST['cadastrar'])){
     $recepcaoVideira->eeg = $_POST['eeg'];
     $recepcaoVideira->data = $_POST['data'];
 
-    $controllerVideira->salvarIndicadores($recepcaoVideira);
+    $resultado = $controllerVideira->salvarIndicadores($recepcaoVideira);
+
+    if ($resultado === true) {
+        header("Location: ../view/indicadoresSalvos.php"); 
+        exit;
+    }
 }
 ?>

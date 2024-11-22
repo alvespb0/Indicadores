@@ -5,16 +5,22 @@ $mensagem = '';
 
 if (isset($_SESSION['comercial'])){
     $mensagem = "Obrigado {$_SESSION['comercial']}, os indicadores já foram salvos em nosso banco de dados😉. Caso queira verificar como estão os gráficos acesse xxxx";
+    unset($_SESSION['comercial']);
 }else if(isset($_SESSION['recepcao_cacador'])){
     $mensagem = "Obrigado {$_SESSION['recepcao_cacador']}, os indicadores já foram salvos em nosso banco de dados😉. Caso queira verificar como estão os gráficos acesse xxxx";
+    unset($_SESSION['recepcao_cacador']);
 }else if(isset($_SESSION['recepcao_fraiburgo'])){
     $mensagem = "Obrigado {$_SESSION['recepcao_fraiburgo']}, os indicadores já foram salvos em nosso banco de dados😉. Caso queira verificar como estão os gráficos acesse xxxx";
+    unset($_SESSION['recepcao_fraiburgo']);
 }else if(isset($_SESSION['recepcao_videira'])){
     $mensagem = "Obrigado {$_SESSION['recepcao_videira']}, os indicadores já foram salvos em nosso banco de dados😉. Caso queira verificar como estão os gráficos acesse xxxx";
+    unset($_SESSION['recepcao_videira']);
 }else if(isset($_SESSION['seguranca'])){
     $mensagem = "Obrigado {$_SESSION['seguranca']}, os indicadores já foram salvos em nosso banco de dados😉. Caso queira verificar como estão os gráficos acesse xxxx";
+    unset($_SESSION['seguranca']);
 }else if(isset($_SESSION['ambiental'])){
     $mensagem = "Obrigado {$_SESSION['ambiental']}, os indicadores já foram salvos em nosso banco de dados😉. Caso queira verificar como estão os gráficos acesse xxxx";
+    unset($_SESSION['ambiental']);
 }
 ?>
 

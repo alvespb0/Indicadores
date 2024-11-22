@@ -84,7 +84,7 @@
       <span>Segmetre Indicadores</span>
     </div>
     <ul class="nav-links">
-      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="view/sobre.php">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>

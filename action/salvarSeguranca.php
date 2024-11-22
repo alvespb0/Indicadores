@@ -16,6 +16,11 @@ if(isset($_POST['cadastrar'])){
     $seguranca->qtdLevantamentosRealizados = $_POST['qtdLevantamentosRealizados'];
     $seguranca->treinamentosRealizados = $_POST['treinamentosRealizados'];
     $seguranca->data = $_POST['data'];
-    $controllerSeguranca->salvarIndicadores($seguranca);
+    $resultado = $controllerSeguranca->salvarIndicadores($seguranca);
+
+    if ($resultado === true) {
+        header("Location: ../view/indicadoresSalvos.php"); 
+        exit;
+    }
 }
 ?>
