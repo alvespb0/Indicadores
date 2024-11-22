@@ -193,6 +193,7 @@ button:focus {
 </html>
 <?php
 }else{
-  echo "teste";
+  $_SESSION['erroLogin'] = "Você não tem acesso a essa página.";
+  header("Location: login.php");
 }
 ?>

@@ -188,5 +188,6 @@ if(isset($_SESSION['recepcao_cacador'])){
 <?php
 }else{
   $_SESSION['erroLogin'] = "Você não tem acesso a essa página.";
-  header("Location: ../index.php");}
+  header("Location: login.php");
+}
 ?>

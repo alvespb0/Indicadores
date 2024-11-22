@@ -1,5 +1,7 @@
 <?php include('../index.php');
-session_start();?>
+session_start();
+session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -110,16 +112,15 @@ form {
         </div>
         <button type="submit">Entrar</button>
         <?php
-        if (isset($_SESSION['Login404'])){
+        if (isset($_SESSION['Login404'])){         
         echo $_SESSION['Login404'];
         unset($_SESSION['Login404']);
         }else if(isset($_SESSION['erroLogin'])){
           echo $_SESSION['erroLogin'];
+          unset($_SESSION['Login404']);
         }?>
       </form>
-
     </div>
   </div>
-
 </body>
 </html>
