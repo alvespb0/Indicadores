@@ -1,4 +1,7 @@
-<?php include('../index.php');?>
+<?php include('../index.php');
+session_start();
+if(isset($_SESSION['recepcao_cacador'])){
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -189,6 +192,11 @@ button:focus {
       </form>
     </div>
   </div>
-
 </body>
 </html>
+<?php
+}else{
+  $_SESSION['erroLogin'] = "Você não tem acesso a essa página.";
+  header("Location: ../index.php");
+}
+?>

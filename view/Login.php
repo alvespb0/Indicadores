@@ -113,6 +113,8 @@ form {
         if (isset($_SESSION['Login404'])){
         echo $_SESSION['Login404'];
         unset($_SESSION['Login404']);
+        }else if(isset($_SESSION['erroLogin'])){
+          echo $_SESSION['erroLogin'];
         }?>
       </form>
 

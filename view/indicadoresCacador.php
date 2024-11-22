@@ -1,6 +1,6 @@
 <?php include('../index.php'); 
 session_start();
-echo $_SESSION['recepcao_cacador'];
+if(isset($_SESSION['recepcao_cacador'])){
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -185,3 +185,8 @@ echo $_SESSION['recepcao_cacador'];
 
 </body>
 </html>
+<?php
+}else{
+  $_SESSION['erroLogin'] = "Você não tem acesso a essa página.";
+  header("Location: ../index.php");}
+?>

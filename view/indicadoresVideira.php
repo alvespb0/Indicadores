@@ -1,4 +1,7 @@
-<?php include('../index.php');?>
+<?php include('../index.php');
+session_start();
+if(isset($_SESSION['recepcao_videira'])){
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -200,3 +203,9 @@ button:focus {
 
 </body>
 </html>
+<?php 
+}else{
+  $_SESSION['erroLogin'] = "Você não tem acesso a essa página.";
+  header("Location: ../index.php");
+}
+?>

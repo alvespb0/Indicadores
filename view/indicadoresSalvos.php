@@ -1,3 +1,5 @@
-<?php include ('../index.php');?>
+<?php include ('../index.php');
+session_start();
+?>
     
-<?php session_start(); echo $_SESSION['ambiental']?>
+<?php echo $_SESSION['ambiental']?>
