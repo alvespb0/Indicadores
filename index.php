@@ -1,3 +1,30 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['comercial'])){
+  $logado = true;
+}else if(isset($_SESSION['recepcao_cacador'])){
+  $logado = true;
+}else if(isset($_SESSION['recepcao_fraiburgo'])){
+  $logado = true;
+}else if(isset($_SESSION['recepcao_videira'])){
+  $logado = true;
+}else if(isset($_SESSION['seguranca'])){
+  $logado = true;
+}else if(isset($_SESSION['ambiental'])){
+  $logado = true;
+}else{
+  $logado = false;
+}
+
+if ($logado) {
+  $link = '<a href="' . (strpos($_SERVER['REQUEST_URI'], 'view') === false ? 'view/sair.php' : 'sair.php') . '">Sair</a>';
+} else {
+  $link = '<a href="' . (strpos($_SERVER['REQUEST_URI'], 'view') === false ? 'view/Login.php' : 'Login.php') . '">Login</a>';
+}
+$sobre = '<a href="'. (strpos($_SERVER['REQUEST_URI'], 'view') === false ? 'view/sobre.php' : 'sobre.php').'">Sobre</a>';
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -84,8 +111,9 @@
       <span>Segmetre Indicadores</span>
     </div>
     <ul class="nav-links">
-      <li><a href="sobre.php">Sobre</a></li>
-      <li><a href="wa.me/+5549984253805">Contato</a></li>
+      <li><?php echo $sobre; ?></li>
+      <li><a href="https://wa.me/+5549984253805" target="_blank">Contato</a></li>
+      <li><?php echo $link; ?></li>
     </ul>
   </nav>
 

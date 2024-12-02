@@ -1,6 +1,6 @@
-<?php include ('../index.php');
-session_start();
-
+<?php 
+/* session_start(); */
+include ('../index.php');
 $mensagem = '';
 
 if (isset($_SESSION['comercial'])){

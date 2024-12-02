@@ -1,6 +1,6 @@
 <?php include('../index.php'); 
-session_start();
-if(isset($_SESSION['recepcao_cacador'])){
+/* session_start();
+ */if(isset($_SESSION['recepcao_cacador'])){
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

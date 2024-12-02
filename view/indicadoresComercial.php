@@ -1,5 +1,5 @@
 <?php include('../index.php');
-session_start();
+/* session_start(); */
 if(isset($_SESSION['comercial'])){
 ?>
 <!DOCTYPE html>
@@ -189,8 +189,14 @@ button:focus {
         </div>
         <div class="input-group">
           <label for="ValorContratos">Valor Total de Contratos</label>
-          <input type="number" id="ValorContratos" name="Valor_Contratos" placeholder="Digite o valor total de Contratos" required>
+          <input type="text" id="ValorContratos" name="Valor_Contratos" placeholder="Digite o valor total de Contratos" required>
         </div>
+        <script>
+          document.getElementById('ValorContratos').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/[^\d,.-]/g, '').replace('.', ',');
+          });
+        </script>
+
         <!-- Campo de Data -->
         <div class="input-group">
           <label for="data">Data</label>

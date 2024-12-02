@@ -1,6 +1,6 @@
 <?php include('../index.php');
-session_start();
-session_destroy();
+/* session_start();
+ */session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
