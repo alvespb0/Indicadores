@@ -84,8 +84,8 @@
       <span>Segmetre Indicadores</span>
     </div>
     <ul class="nav-links">
-      <li><a href="view/sobre.php">Sobre</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="sobre.php">Sobre</a></li>
+      <li><a href="wa.me/+5549984253805">Contato</a></li>
     </ul>
   </nav>
 
